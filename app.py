@@ -1,0 +1,1 @@
+(codul aplicației, vezi mesajul anterior)

@@ -1,1 +1,1 @@
-# titluri-app
+(conținut README.md, vezi mesajul anterior)
