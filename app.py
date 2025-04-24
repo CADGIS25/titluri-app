@@ -56,6 +56,11 @@ uploaded_file = st.file_uploader("Încarcă fișierul Excel (.xlsx) sau Access (
 
 if uploaded_file:
     filetype = uploaded_file.name.split(".")[-1].lower()
+    
+    if filetype in ["mdb", "accdb"]:
+        st.error("⚠️ Fișierele .mdb nu sunt suportate pe Streamlit Cloud. Te rugăm să folosești .xlsx.")
+        st.stop()
+        
     if filetype == "xlsx":
         data = read_excel(uploaded_file)
     elif filetype in ["mdb", "accdb"]:
